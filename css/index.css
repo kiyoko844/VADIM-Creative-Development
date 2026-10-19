@@ -1,0 +1,11 @@
+/* blocks.css */
+@import url(./blocks/header.css);
+@import url(./blocks/hero.css);
+@import url(./blocks/about.css);
+@import url(./blocks/work.css);
+@import url(./blocks/services.css);
+@import url(./blocks/process.css);
+@import url(./blocks/language.css);
+@import url(./blocks/testimonials.css);
+@import url(./blocks/contact.css);
+@import url(./blocks/loader.css);

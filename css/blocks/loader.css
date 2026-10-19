@@ -1,0 +1,134 @@
+.site-loader {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #030a18;
+	color: #eef8ff;
+	overflow: hidden;
+
+	opacity: 1;
+	visibility: visible;
+
+	transition:
+		opacity 0.7s ease,
+		visibility 0.7s ease;
+}
+
+.site-loader.is-hidden {
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+}
+
+.site-loader__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transform: translateY(0);
+	transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-loader__name {
+	font-size: clamp(70px, 12vw, 180px);
+	font-weight: 500;
+	line-height: 0.8;
+	letter-spacing: -0.03em;
+	text-transform: uppercase;
+
+	opacity: 0;
+	transform: translateY(35px);
+
+	animation: loader-name-in 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.site-loader__role {
+	margin-top: 28px;
+
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+
+	color: rgba(214, 238, 252, 0.45);
+
+	opacity: 0;
+	transform: translateY(15px);
+
+	animation: loader-role-in 0.7s ease 0.35s forwards;
+}
+
+.site-loader.is-exiting .site-loader__content {
+	transform: translateY(-45px);
+}
+
+.site-loader.is-exiting .site-loader__name,
+.site-loader.is-exiting .site-loader__role {
+	opacity: 0;
+	transition:
+		opacity 0.4s ease,
+		transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-loader.is-exiting .site-loader__name {
+	transform: translateY(-25px);
+}
+
+.site-loader.is-exiting .site-loader__role {
+	transform: translateY(-15px);
+}
+
+@keyframes loader-name-in {
+	0% {
+		opacity: 0;
+		transform: translateY(35px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes loader-role-in {
+	0% {
+		opacity: 0;
+		transform: translateY(15px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 760px) {
+	.site-loader__name {
+		font-size: clamp(58px, 17vw, 100px);
+	}
+
+	.site-loader__role {
+		margin-top: 22px;
+		font-size: 8px;
+		letter-spacing: 0.1em;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.site-loader__name,
+	.site-loader__role,
+	.site-loader__content {
+		animation: none !important;
+		transition: none !important;
+	}
+
+	.site-loader__name,
+	.site-loader__role {
+		opacity: 1;
+		transform: none;
+	}
+}

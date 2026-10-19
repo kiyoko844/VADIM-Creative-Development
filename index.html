@@ -1,0 +1,1323 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="VADIM® — Creative Web Developer. Создание современных цифровых проектов, интерфейсов и веб-сайтов." />
+
+		<title>VADIM — Creative Web Developer</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="shortcut icon"
+			href="./icons/favicon-02.png"
+			type="image/x-icon"
+		/>
+
+		<link rel="preload" as="image" href="./images/hero.webp" fetchpriority="high" />
+		<link rel="stylesheet" href="./css/blocks/header.css" />
+		<link rel="stylesheet" href="./css/blocks/hero.css" />
+		<link rel="stylesheet" href="./css/blocks/about.css" />
+		<link rel="stylesheet" href="./css/blocks/work.css" />
+		<link rel="stylesheet" href="./css/blocks/services.css" />
+		<link rel="stylesheet" href="./css/blocks/process.css" />
+		<link rel="stylesheet" href="./css/blocks/language.css" />
+		<link rel="stylesheet" href="./css/blocks/testimonials.css" />
+		<link rel="stylesheet" href="./css/blocks/contact.css" />
+		<link rel="stylesheet" href="./css/blocks/loader.css" />
+
+		<link rel="stylesheet" href="./contact/contact-modal.css" />
+
+		<link rel="stylesheet" href="./css/ice.css" />
+	</head>
+
+	<body>
+		<div class="site-loader" id="siteLoader" aria-hidden="true">
+			<div class="site-loader__content">
+				<svg
+					class="site-loader__flake"
+					viewBox="-12 -12 24 24"
+					fill="none"
+					stroke="#eef8ff"
+					stroke-width="1.1"
+					stroke-linecap="round"
+					aria-hidden="true"
+				>
+					<g transform="rotate(0)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+					<g transform="rotate(60)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+					<g transform="rotate(120)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+					<g transform="rotate(180)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+					<g transform="rotate(240)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+					<g transform="rotate(300)">
+						<path d="M0 0V-11M0 -6L-3 -9M0 -6L3 -9M0 -3.2L-2 -5M0 -3.2L2 -5" />
+					</g>
+				</svg>
+				<div class="site-loader__name">VADIM ®</div>
+
+				<div class="site-loader__role">CREATIVE WEB DEVELOPER</div>
+
+				<div class="site-loader__bar"></div>
+			</div>
+		</div>
+
+		<header class="header">
+			<div class="header__inner">
+				<a href="#" class="header__logo">VADIM<span>®</span></a>
+
+				<nav class="header__nav">
+					<a href="#work" class="header__link" data-i18n="navWork">WORK</a>
+					<a href="#about" class="header__link" data-i18n="navAbout">ABOUT</a>
+					<a href="#services" class="header__link" data-i18n="navServices"
+						>SERVICES</a
+					>
+					<a href="#process" class="header__link" data-i18n="navProcess"
+						>PROCESS</a
+					>
+					<a href="#contact" class="header__link" data-i18n="navContact"
+						>CONTACT</a
+					>
+				</nav>
+
+				<div class="header__right">
+					<div class="language-switcher" aria-label="Language switcher">
+						<button
+							class="language-switcher__button is-active"
+							type="button"
+							data-language="en"
+						>
+							EN
+						</button>
+
+						<span>/</span>
+
+						<button
+							class="language-switcher__button"
+							type="button"
+							data-language="ru"
+						>
+							RU
+						</button>
+					</div>
+
+					<span class="header__location" data-i18n="location">
+						St. Petersburg
+					</span>
+
+					<button
+						class="header__menu-button"
+						id="header-menu-button"
+						type="button"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="header-menu"
+					>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+			</div>
+
+			<div class="header__menu" id="header-menu" aria-hidden="true">
+				<div class="header__menu-top">
+					<span>VADIM® 2026</span>
+
+					<button
+						class="header__menu-close"
+						id="header-menu-close"
+						type="button"
+						aria-label="Close menu"
+					>
+						<span></span>
+						<span></span>
+					</button>
+				</div>
+
+				<nav class="header__menu-nav">
+					<a href="#work" class="header__menu-link">
+						<span>01</span>
+						<strong data-i18n="navWork">WORK</strong>
+					</a>
+
+					<a href="#about" class="header__menu-link">
+						<span>02</span>
+						<strong data-i18n="navAbout">ABOUT</strong>
+					</a>
+
+					<a href="#services" class="header__menu-link">
+						<span>03</span>
+						<strong data-i18n="navServices">SERVICES</strong>
+					</a>
+
+					<a href="#process" class="header__menu-link">
+						<span>04</span>
+						<strong data-i18n="navProcess">PROCESS</strong>
+					</a>
+
+					<a href="#contact" class="header__menu-link">
+						<span>05</span>
+						<strong data-i18n="navContact">CONTACT</strong>
+					</a>
+				</nav>
+
+				<div class="header__menu-bottom">
+					<span data-i18n="developer">CREATIVE WEB DEVELOPER</span>
+					<span data-i18n="GERMANY2026">ГЕРМАНИЯ — 2026</span>
+				</div>
+			</div>
+		</header>
+
+		<main id="scroll-spacer">
+			<section class="hero">
+				<div class="hero__cursor" id="custom-cursor">
+					<svg viewBox="0 0 48 48" aria-hidden="true">
+						<circle
+							cx="24"
+							cy="24"
+							r="22.75"
+							fill="none"
+							stroke="white"
+							stroke-width="2.5"
+						/>
+
+						<path
+							d="M17 18.5
+				C20 15.5 27 15.5 30 18.5
+				C32.5 21 31.5 25 28.5 26
+				C25.5 27 22 26 20 28.5
+				C18 31 20 34 23.5 34
+				C27 34 30 31.5 31 29"
+							fill="none"
+							stroke="white"
+							stroke-width="2.5"
+							stroke-linecap="round"
+						/>
+					</svg>
+				</div>
+
+				<div class="hero__caption" data-i18n="heroCaption">
+					I'M VADIM — A CREATIVE WEB DEVELOPER FOCUSED ON BUILDING MODERN
+					DIGITAL EXPERIENCES WHERE DESIGN, CODE AND MOTION WORK TOGETHER.
+				</div>
+
+				<div class="hero__product" id="outro-info" data-outro-offset="166">
+					<div class="hero__product-top">
+						<div class="hero__symbol">
+							<svg viewBox="0 0 40 40" aria-hidden="true">
+								<circle
+									cx="20"
+									cy="20"
+									r="18.75"
+									fill="none"
+									stroke="white"
+									stroke-width="2.5"
+								/>
+							</svg>
+
+							<span id="circle-symbol">8</span>
+						</div>
+
+						<div class="hero__collection" data-i18n="developer">
+							CREATIVE WEB DEVELOPER
+						</div>
+					</div>
+
+					<div class="hero__price">HTML / CSS / JS</div>
+				</div>
+
+				<div class="hero__background" id="main-canvas">
+					<img src="./images/hero.webp" alt="" class="hero__background-image" width="1308" height="736" fetchpriority="high" loading="eager">
+				</div>
+
+				<div class="hero__outro-overlay" id="outro-overlay"></div>
+				<div class="hero__frost" aria-hidden="true"></div>
+				<div class="hero__kanji" aria-hidden="true">白霞罸</div>
+
+				<button
+					class="hero__view"
+					id="outro-buy"
+					type="button"
+					data-i18n="view"
+				>
+					view
+				</button>
+
+				<footer class="hero__footer" id="outro-footer">
+					<span>VADIM® 2026</span>
+
+					<span data-i18n="allRights"> ALL RIGHTS RESERVED </span>
+				</footer>
+			</section>
+
+			<section class="work" id="work">
+				<div class="work__top">
+					<div class="work__label">
+						<span>02</span>
+						<span data-i18n="selectedWork">SELECTED WORK</span>
+					</div>
+
+					<span class="work__year">VADIM® / 2026</span>
+				</div>
+
+				<div class="work__hero">
+					<div class="work__intro">
+						<p data-i18n="workIntro">
+							A selection of digital experiences, interfaces and websites
+							designed and developed with attention to detail.
+						</p>
+					</div>
+				</div>
+
+				<div class="work__showcase">
+					<div class="work__projects">
+						<article class="work-project is-active" data-project="0">
+							<div class="work-project__number">01</div>
+
+							<div class="work-project__info">
+								<h3>ATELIER 17</h3>
+								<p data-i18n="creativeWebsite">Creative restaurant</p>
+							</div>
+
+							<div class="work-project__meta">
+								<span>2026</span>
+							</div>
+						</article>
+
+						<article class="work-project" data-project="1">
+							<div class="work-project__number">02</div>
+
+							<div class="work-project__info">
+								<h3>AUREL — Fine Fragrance</h3>
+								<p data-i18n="perfumeFragrance">Perfume / Fragrance</p>
+							</div>
+
+							<div class="work-project__meta">
+								<span>2026</span>
+							</div>
+						</article>
+
+						<article class="work-project" data-project="2">
+							<div class="work-project__number">03</div>
+
+							<div class="work-project__info">
+								<h3>NØRTH OBJECT</h3>
+								<p data-i18n="contemporaryFashion">Contemporary Fashion</p>
+							</div>
+
+							<div class="work-project__meta">
+								<span>2026</span>
+							</div>
+						</article>
+
+						<article class="work-project" data-project="3">
+							<div class="work-project__number">04</div>
+
+							<div class="work-project__info">
+								<h3>KORI ARENA</h3>
+								<p data-i18n="ComputerClub">Computer Club</p>
+							</div>
+
+							<div class="work-project__meta">
+								<span>2026</span>
+							</div>
+						</article>
+
+						<a href="portfolio.html" class="work__all-projects">
+							<span data-i18n="viewAllProjects">VIEW ALL PROJECTS</span>
+							<span>↗</span>
+						</a>
+					</div>
+
+					<div class="work__preview">
+						<div class="work__preview-counter">
+							<span class="work__preview-current">01</span>
+							<span>/</span>
+							<span class="work__preview-total">08</span>
+						</div>
+
+						<div class="work__preview-images">
+							<img
+								class="work-preview-image is-active"
+								src="./images/ATELIER/ATELIER-01.webp"
+								alt="ATELIER home page"
+								data-project="0"
+								data-image="0" width="1408" height="756" loading="lazy" decoding="async" srcset="./images/ATELIER/ATELIER-01-704.webp 704w, ./images/ATELIER/ATELIER-01.webp 1408w" sizes="(max-width: 760px) 100vw, 704px">
+
+							<img
+								class="work-preview-image"
+								src="./images/Aurel/Aurel-01.webp"
+								alt="AUREL Fine Fragrance home page"
+								data-project="1"
+								data-image="0" width="1408" height="716" loading="lazy" decoding="async" srcset="./images/Aurel/Aurel-01-704.webp 704w, ./images/Aurel/Aurel-01.webp 1408w" sizes="(max-width: 760px) 100vw, 704px">
+
+							<img
+								class="work-preview-image"
+								src="./images/NORTH/North-01.webp"
+								alt="NØRTH OBJECT"
+								data-project="2" width="1408" height="749" loading="lazy" decoding="async" srcset="./images/NORTH/North-01-704.webp 704w, ./images/NORTH/North-01.webp 1408w" sizes="(max-width: 760px) 100vw, 704px">
+
+							<img
+								class="work-preview-image"
+								src="./images/KORI-Arena/KORI-01.webp"
+								alt="KORI ARENA Computer Club"
+								data-project="3" width="1408" height="710" loading="lazy" decoding="async" srcset="./images/KORI-Arena/KORI-01-704.webp 704w, ./images/KORI-Arena/KORI-01.webp 1408w" sizes="(max-width: 760px) 100vw, 704px">
+						</div>
+
+						<div class="work__preview-overlay"></div>
+
+						<div class="work__preview-top">
+							<span data-i18n="selectedProject">SELECTED PROJECT</span>
+							<span data-i18n="scrollHover">SCROLL / HOVER</span>
+						</div>
+
+						<div class="work__preview-bottom">
+							<div>
+								<span class="work__preview-title">ATELIER 17</span>
+
+								<span
+									class="work__preview-description"
+									data-i18n="Creative restaurant"
+								>
+									Creative restaurant
+								</span>
+							</div>
+
+							<button
+								class="work__preview-open"
+								type="button"
+								data-open-case="0"
+							>
+								<span data-i18n="viewCase">VIEW CASE</span>
+								<span>↗</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="case-study" id="caseStudy">
+				<div class="case-study__overlay"></div>
+
+				<div class="case-study__window">
+					<header class="case-study__header">
+						<div class="case-study__label">
+							<span data-i18n="caseStudy">Case study</span>
+						</div>
+
+						<button
+							class="case-study__close"
+							type="button"
+							aria-label="Close case study"
+						>
+							<span></span>
+							<span></span>
+						</button>
+					</header>
+
+					<div class="case-study__content">
+						<div class="case-study__hero">
+							<div class="case-study__hero-meta">
+								<span class="case-study__number">01</span>
+
+								<span class="case-study__count" data-i18n="pages8">
+									9 pages
+								</span>
+							</div>
+
+							<h2 class="case-study__title">ATELIER</h2>
+
+							<p class="case-study__description" data-i18n="caseDescription">
+								Creative website focused on visual identity, interaction and
+								digital presentation.
+							</p>
+						</div>
+
+						<div class="case-study__stats">
+							<div class="case-study__stat">
+								<span data-i18n="pages">Pages</span>
+								<strong>9</strong>
+							</div>
+
+							<div class="case-study__stat">
+								<span data-i18n="sections">Sections</span>
+								<strong>9</strong>
+							</div>
+
+							<div class="case-study__stat">
+								<span data-i18n="year">Year</span>
+								<strong>2026</strong>
+							</div>
+
+							<div class="case-study__stat">
+								<span data-i18n="stack">Stack</span>
+								<strong>HTML / CSS / JS</strong>
+							</div>
+						</div>
+
+						<div class="case-study__gallery">
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-01.webp"
+									alt="ATELIER home page" width="1408" height="756" loading="lazy" decoding="async" srcset="./images/ATELIER/ATELIER-01-704.webp 704w, ./images/ATELIER/ATELIER-01.webp 1408w" sizes="(max-width: 760px) 100vw, 704px">
+
+								<figcaption>
+									<span>01</span>
+									<span data-i18n="home">Home</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-02.webp"
+									alt="ATELIER menu page" width="2000" height="1088" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>02</span>
+									<span data-i18n="ourWork">Menu</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-03.webp"
+									alt="ATELIER seasonal page" width="2000" height="1080" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>03</span>
+									<span data-i18n="ourWork">Seasonal</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-04.webp"
+									alt="ATELIER about page" width="2000" height="1082" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>04</span>
+									<span data-i18n="process">About</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-05.webp"
+									alt="ATELIER atmosphere page" width="2000" height="1042" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>05</span>
+									<span data-i18n="manifesto">Atmosphere</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-06.webp"
+									alt="ATELIER home page" width="2000" height="1056" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>06</span>
+									<span data-i18n="contact">Home</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-07.webp"
+									alt="ATELIER kitchen page" width="2000" height="1085" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>06</span>
+									<span data-i18n="contact">Kitchen</span>
+								</figcaption>
+							</figure>
+
+							<figure class="case-study__image">
+								<img
+									src="./images/ATELIER/ATELIER-08.webp"
+									alt="ATELIER contact page" width="2000" height="966" loading="lazy" decoding="async">
+
+								<figcaption>
+									<span>06</span>
+									<span data-i18n="contact">Contact</span>
+								</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<section class="about" id="about">
+				<div class="about__top">
+					<div class="about__label">
+						<span>03</span>
+						<span data-i18n="about">ABOUT</span>
+					</div>
+
+					<span class="about__year"> VADIM® / 2026 </span>
+				</div>
+
+				<div class="about__hero">
+					<h2 class="about__title">
+						<span data-i18n="aboutTitle1">I DESIGN</span>
+						<br />
+
+						<span data-i18n="aboutTitle2">AND BUILD</span>
+						<br />
+
+						<span data-i18n="aboutTitle3">DIGITAL</span>
+						<br />
+
+						<span data-i18n="aboutTitle4">EXPERIENCES.</span>
+					</h2>
+
+					<div class="about__intro">
+						<span class="about__intro-label"> 01 / INTRO </span>
+
+						<p data-i18n="aboutIntro">
+							I'M VADIM — A CREATIVE WEB DEVELOPER CRAFTING DISTINCTIVE DIGITAL
+							EXPERIENCES WITH A STRONG FOCUS ON VISUALS, INTERACTION AND
+							DETAIL.
+						</p>
+					</div>
+				</div>
+
+				<div class="about__middle">
+					<div class="about__statement">
+						<span class="about__small-label"> 02 / APPROACH </span>
+
+						<p data-i18n="aboutApproach">
+							CLEAN STRUCTURE.
+							<br />
+							STRONG VISUALS.
+							<br />
+							MEANINGFUL INTERACTION.
+						</p>
+					</div>
+
+					<div class="about__stack">
+						<span class="about__small-label"> 03 / STACK </span>
+
+						<div class="about__stack-list">
+							<div>
+								<span>01</span>
+								<strong>HTML</strong>
+							</div>
+
+							<div>
+								<span>02</span>
+								<strong>CSS</strong>
+							</div>
+
+							<div>
+								<span>03</span>
+								<strong>JAVASCRIPT</strong>
+							</div>
+
+							<div>
+								<span>04</span>
+								<strong>WORDPRESS</strong>
+							</div>
+
+							<div>
+								<span>05</span>
+								<strong>ACF</strong>
+							</div>
+
+							<div>
+								<span>06</span>
+								<strong data-i18n="aiDevelopment"> AI Development </strong>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="about__bottom">
+					<div class="about__availability">
+						<span class="about__status"></span>
+
+						<div>
+							<span data-i18n="availableFor"> AVAILABLE FOR </span>
+
+							<strong data-i18n="selectedProjects"> SELECTED PROJECTS </strong>
+						</div>
+					</div>
+
+					<a href="#contact" class="about__contact">
+						<span data-i18n="letsBuild"> LET'S BUILD SOMETHING </span>
+
+						<strong>↗</strong>
+					</a>
+				</div>
+			</section>
+
+			<section class="services" id="services">
+				<div class="services__top">
+					<div class="services__label">
+						<span>04</span>
+						<span data-i18n="services">SERVICES</span>
+					</div>
+
+					<span class="services__year">VADIM® / 2026</span>
+				</div>
+
+				<div class="services__intro">
+					<h2 class="services__title">
+						<span data-i18n="servicesTitle1">WHAT</span>
+						<br />
+
+						<span data-i18n="servicesTitle2">I CAN</span>
+						<br />
+
+						<span data-i18n="servicesTitle3">BUILD.</span>
+					</h2>
+
+					<p class="services__description" data-i18n="servicesDescription">
+						DIGITAL EXPERIENCES BUILT AROUND CLEAR DESIGN, CLEAN CODE AND
+						MEANINGFUL INTERACTION.
+					</p>
+				</div>
+
+				<div class="services__list">
+					<!-- 01 -->
+					<button
+						class="services__item is-active"
+						type="button"
+						data-service="0"
+					>
+						<span class="services__number">01</span>
+
+						<div class="services__main">
+							<h3 data-i18n="webDesign">WEB DESIGN</h3>
+
+							<p data-i18n="webDesignMeta">
+								VISUAL DIRECTION / UI / TYPOGRAPHY
+							</p>
+						</div>
+
+						<div class="services__pricing">
+							<span data-i18n="webDesignPrice">FROM 10 000 ₽</span>
+							<span data-i18n="webDesignTime">1–2 WEEKS</span>
+						</div>
+					</button>
+
+					<!-- 02 -->
+					<button class="services__item" type="button" data-service="1">
+						<span class="services__number">02</span>
+
+						<div class="services__main">
+							<h3 data-i18n="frontEnd">FRONT-END</h3>
+
+							<p data-i18n="frontEndMeta">HTML / CSS / JAVASCRIPT</p>
+						</div>
+
+						<div class="services__pricing">
+							<span data-i18n="frontEndPrice">FROM 25 000 ₽</span>
+							<span data-i18n="frontEndTime">1–2 WEEKS</span>
+						</div>
+					</button>
+
+					<!-- 03 -->
+					<button class="services__item" type="button" data-service="2">
+						<span class="services__number">03</span>
+
+						<div class="services__main">
+							<h3 data-i18n="interaction">INTERACTION</h3>
+
+							<p data-i18n="interactionMeta">
+								MOTION / MICRO-INTERACTIONS / UX
+							</p>
+						</div>
+
+						<div class="services__pricing">
+							<span data-i18n="interactionPrice">FROM 10 000 ₽</span>
+							<span data-i18n="interactionTime">1–2 WEEKS</span>
+						</div>
+					</button>
+
+					<!-- 04 -->
+					<button class="services__item" type="button" data-service="3">
+						<span class="services__number">04</span>
+
+						<div class="services__main">
+							<h3 data-i18n="responsive">RESPONSIVE</h3>
+
+							<p data-i18n="responsiveMeta">DESKTOP / TABLET / MOBILE</p>
+						</div>
+
+						<div class="services__pricing">
+							<span data-i18n="responsivePrice">INCLUDED</span>
+							<span data-i18n="responsiveTime">EVERY PROJECT</span>
+						</div>
+					</button>
+				</div>
+
+				<div class="services__feature">
+					<div class="services__feature-top">
+						<span data-i18n="selectedService"> SELECTED SERVICE </span>
+
+						<span>
+							<span id="services-current">01</span>
+							/ 04
+						</span>
+					</div>
+
+					<div class="services__feature-content">
+						<strong id="services-title" data-i18n="webDesign">
+							WEB DESIGN
+						</strong>
+
+						<p id="services-text" data-i18n="serviceWebDesignText">
+							CREATING VISUAL SYSTEMS THAT GIVE A DIGITAL PRODUCT ITS OWN
+							CHARACTER.
+						</p>
+					</div>
+
+					<div class="services__feature-index">
+						<span id="services-index">01</span>
+					</div>
+				</div>
+
+				<div class="services__bottom">
+					<span data-i18n="designDevelopmentMotion">
+						DESIGN / DEVELOPMENT / MOTION
+					</span>
+
+					<span data-i18n="hoverExplore"> HOVER TO EXPLORE </span>
+
+					<span data-i18n="scrollContinue"> ↘ SCROLL TO CONTINUE </span>
+				</div>
+			</section>
+
+			<section class="process" id="process">
+				<div class="process__top">
+					<div class="process__label">
+						<span>05</span>
+						<span data-i18n="process">PROCESS</span>
+					</div>
+
+					<span class="process__year"> VADIM® / 2026 </span>
+				</div>
+
+				<div class="process__intro">
+					<h2 class="process__title">
+						<span data-i18n="goodWork"> GOOD WORK </span>
+
+						<br />
+
+						<span data-i18n="takesA"> TAKES A </span>
+
+						<br />
+
+						<span data-i18n="clear"> CLEAR </span>
+
+						<br />
+
+						<span data-i18n="direction"> DIRECTION. </span>
+					</h2>
+				</div>
+
+				<div class="process__content">
+					<div class="process__steps">
+						<button
+							class="process__step is-active"
+							type="button"
+							data-process="0"
+						>
+							<span class="process__step-number">01</span>
+
+							<div class="process__step-main">
+								<h3 data-i18n="discover">DISCOVER</h3>
+								<p data-i18n="discoverMeta">IDEA / GOALS / DIRECTION</p>
+							</div>
+						</button>
+
+						<button class="process__step" type="button" data-process="1">
+							<span class="process__step-number">02</span>
+
+							<div class="process__step-main">
+								<h3 data-i18n="design">DESIGN</h3>
+								<p data-i18n="designMeta">VISUAL / TYPE / STRUCTURE</p>
+							</div>
+						</button>
+
+						<button class="process__step" type="button" data-process="2">
+							<span class="process__step-number">03</span>
+
+							<div class="process__step-main">
+								<h3 data-i18n="develop">DEVELOP</h3>
+								<p data-i18n="developMeta">HTML / CSS / JAVASCRIPT</p>
+							</div>
+						</button>
+
+						<button class="process__step" type="button" data-process="3">
+							<span class="process__step-number">04</span>
+
+							<div class="process__step-main">
+								<h3 data-i18n="refine">REFINE</h3>
+								<p data-i18n="refineMeta">MOTION / DETAILS / PERFORMANCE</p>
+							</div>
+						</button>
+					</div>
+
+					<div class="process__visual">
+						<div class="process__visual-index">
+							<span id="process-current">01</span>
+							<span>/ 04</span>
+						</div>
+
+						<div class="process__visual-number" id="process-number">01</div>
+
+						<div class="process__visual-info">
+							<span id="process-label" data-i18n="processDiscoverLabel">
+								01 / DISCOVER
+							</span>
+
+							<strong id="process-title" data-i18n="processDiscoverTitle">
+								START WITH THE IDEA.
+							</strong>
+
+							<p id="process-text" data-i18n="processDiscoverText">
+								UNDERSTAND THE PURPOSE, DEFINE THE DIRECTION AND BUILD A CLEAR
+								FOUNDATION FOR THE PROJECT.
+							</p>
+						</div>
+
+						<div class="process__visual-line"></div>
+					</div>
+				</div>
+
+				<div class="process__bottom">
+					<span data-i18n="processSteps">
+						DISCOVER / DESIGN / DEVELOP / REFINE
+					</span>
+
+					<span data-i18n="fourSteps"> 04 STEPS </span>
+
+					<span data-i18n="scrollContinue"> ↘ SCROLL TO CONTINUE </span>
+				</div>
+			</section>
+
+			<section class="testimonials" id="testimonials">
+				<div class="testimonials__top">
+					<div class="testimonials__label">
+						<span>06</span>
+						<span data-i18n="testimonials">TESTIMONIALS</span>
+					</div>
+
+					<span class="testimonials__year">VADIM® / 2026</span>
+				</div>
+
+				<div class="testimonials__hero">
+					<h2 class="testimonials__title" data-i18n="testimonialsTitle">
+						WHAT PEOPLE
+						<br />
+						SAY.
+					</h2>
+				</div>
+
+				<div class="testimonials__marquee">
+					<div class="testimonials__track testimonials__track--right">
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial1Text">
+								“Exactly what we needed. Clean structure, simple navigation and
+								a much better presentation of the business.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial1Name">MIKHAIL</strong>
+								<span data-i18n="testimonial1Role">SMALL BUSINESS OWNER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial2Text">
+								“The portfolio feels clean and easy to use. The mobile version
+								was especially important, and it turned out really well.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial2Name">ANNA</strong>
+								<span data-i18n="testimonial2Role">PHOTOGRAPHER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial3Text">
+								“The landing page came together quickly. The design was followed
+								closely and the small details made a real difference.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial3Name">DANIEL</strong>
+								<span data-i18n="testimonial3Role">STARTUP FOUNDER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial4Text">
+								“The new website feels much more consistent with the brand. The
+								structure is clear and the visual part finally feels complete.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial4Name">ELENA</strong>
+								<span data-i18n="testimonial4Role">FASHION BRAND</span>
+							</div>
+						</article>
+
+						<!-- Duplicate set for seamless loop -->
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial1Text">
+								“Exactly what we needed. Clean structure, simple navigation and
+								a much better presentation of the business.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial1Name">MIKHAIL</strong>
+								<span data-i18n="testimonial1Role">SMALL BUSINESS OWNER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial2Text">
+								“The portfolio feels clean and easy to use. The mobile version
+								was especially important, and it turned out really well.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial2Name">ANNA</strong>
+								<span data-i18n="testimonial2Role">PHOTOGRAPHER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial3Text">
+								“The landing page came together quickly. The design was followed
+								closely and the small details made a real difference.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial3Name">DANIEL</strong>
+								<span data-i18n="testimonial3Role">STARTUP FOUNDER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial4Text">
+								“The new website feels much more consistent with the brand. The
+								structure is clear and the visual part finally feels complete.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial4Name">ELENA</strong>
+								<span data-i18n="testimonial4Role">FASHION BRAND</span>
+							</div>
+						</article>
+					</div>
+				</div>
+
+				<div class="testimonials__marquee">
+					<div class="testimonials__track testimonials__track--left">
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial5Text">
+								“The Figma design translated really well into the final website.
+								Everything feels precise without becoming too complicated.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial5Name">ALEX</strong>
+								<span data-i18n="testimonial5Role">FREELANCE DESIGNER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial6Text">
+								“The old website finally feels modern. The layout is cleaner and
+								the mobile experience is much easier to use now.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial6Name">SOFIA</strong>
+								<span data-i18n="testimonial6Role">BEAUTY STUDIO</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial7Text">
+								“Simple, modern and exactly the right amount of information. It
+								works well as a personal website without feeling overloaded.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial7Name">MARK</strong>
+								<span data-i18n="testimonial7Role">PERSONAL BRAND</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial8Text">
+								“The pages are well structured and everything is easy to
+								understand. The final result feels professional without being
+								overdesigned.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial8Name">NIKITA</strong>
+								<span data-i18n="testimonial8Role">SMALL BUSINESS</span>
+							</div>
+						</article>
+
+						<!-- Duplicate set for seamless loop -->
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial5Text">
+								“The Figma design translated really well into the final website.
+								Everything feels precise without becoming too complicated.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial5Name">ALEX</strong>
+								<span data-i18n="testimonial5Role">FREELANCE DESIGNER</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial6Text">
+								“The old website finally feels modern. The layout is cleaner and
+								the mobile experience is much easier to use now.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial6Name">SOFIA</strong>
+								<span data-i18n="testimonial6Role">BEAUTY STUDIO</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial7Text">
+								“Simple, modern and exactly the right amount of information. It
+								works well as a personal website without feeling overloaded.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial7Name">MARK</strong>
+								<span data-i18n="testimonial7Role">PERSONAL BRAND</span>
+							</div>
+						</article>
+
+						<article class="testimonial">
+							<div class="testimonial__text" data-i18n="testimonial8Text">
+								“The pages are well structured and everything is easy to
+								understand. The final result feels professional without being
+								overdesigned.”
+							</div>
+
+							<div class="testimonial__author">
+								<strong data-i18n="testimonial8Name">NIKITA</strong>
+								<span data-i18n="testimonial8Role">SMALL BUSINESS</span>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact" id="contact">
+				<div class="contact__top">
+					<div class="contact__label">
+						<span>07</span>
+						<span data-i18n="contact">CONTACT</span>
+					</div>
+
+					<span class="contact__year">VADIM® / 2026</span>
+				</div>
+
+				<div class="contact__content">
+					<div class="contact__statement">
+						<span data-i18n="letsCreate">LET'S CREATE</span>
+
+						<h2>
+							<span data-i18n="something">SOMETHING</span>
+
+							<br />
+
+							<span data-i18n="worth">WORTH</span>
+
+							<br />
+
+							<span data-i18n="seeing">SEEING.</span>
+						</h2>
+					</div>
+
+					<a href="#contact" class="contact__cta">
+						<span data-i18n="startProject">START A PROJECT</span>
+
+						<strong>↗</strong>
+					</a>
+				</div>
+
+				<div class="contact__bottom">
+					<div class="contact__identity">
+						<span>VADIM®</span>
+
+						<span data-i18n="developer"> CREATIVE WEB DEVELOPER </span>
+					</div>
+
+					<div class="contact__details">
+						<a href="mailto:khatmullinv@list.ru">
+							<span data-i18n="email">EMAIL</span>
+						</a>
+
+						<a
+							href="https://github.com/kiyoko844"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span>GITHUB</span>
+						</a>
+
+						<a
+							href="https://t.me/xitsuma"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<span data-i18n="telegram">TELEGRAM</span>
+						</a>
+					</div>
+
+					<span class="contact__location" data-i18n="location"> Германия </span>
+				</div>
+			</section>
+		</main>
+
+		<script src="./js/header.js"></script>
+		<script src="./js/hero.js"></script>
+		<script src="./js/work.js"></script>
+		<script src="./js/about.js"></script>
+		<script src="./js/services.js"></script>
+		<script src="./js/process.js"></script>
+		<script src="./js/contact.js"></script>
+		<script src="./js/language.js"></script>
+		<script src="./js/loader.js"></script>
+		<script src="./js/ice.js"></script>
+
+		<script src="./contact/contact-modal.js"></script>
+
+		<div class="contact-modal" id="contactModal" aria-hidden="true">
+			<div class="contact-modal__overlay" data-contact-close></div>
+			<div
+				class="contact-modal__window"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="contactModalTitle"
+			>
+				<button
+					class="contact-modal__close"
+					type="button"
+					aria-label="Close"
+					data-contact-close
+				>
+					<span></span>
+					<span></span>
+				</button>
+
+				<div class="contact-modal__header">
+					<span class="contact-modal__label" data-i18n="contactModalLabel">
+						CONTACT
+					</span>
+
+					<h2 id="contactModalTitle" data-i18n="contactModalTitle">
+						START A PROJECT
+					</h2>
+
+					<p data-i18n="contactModalDescription">
+						Tell me a little about your project.
+					</p>
+				</div>
+
+				<form class="contact-form" id="contactForm">
+					<div class="contact-form__field">
+						<label for="contactName" data-i18n="contactNameLabel"> Name </label>
+
+						<input
+							type="text"
+							id="contactName"
+							name="name"
+							placeholder="Your name"
+							data-i18n-placeholder="contactNamePlaceholder"
+							autocomplete="name"
+							required
+						/>
+					</div>
+
+					<div class="contact-form__field">
+						<label for="contactContact" data-i18n="contactInfoLabel">
+							Telegram / Email
+						</label>
+
+						<input
+							type="text"
+							id="contactContact"
+							name="contact"
+							placeholder="@username or email"
+							data-i18n-placeholder="contactInfoPlaceholder"
+							autocomplete="email"
+							required
+						/>
+					</div>
+
+					<div class="contact-form__field">
+						<label for="contactMessage" data-i18n="contactMessageLabel">
+							Project
+						</label>
+
+						<textarea
+							id="contactMessage"
+							name="message"
+							placeholder="Tell me about your project..."
+							data-i18n-placeholder="contactMessagePlaceholder"
+							rows="5"
+							required
+						></textarea>
+					</div>
+
+					<!-- Honeypot against simple spam bots -->
+					<input
+						type="text"
+						name="website"
+						class="contact-form__honeypot"
+						tabindex="-1"
+						autocomplete="off"
+					/>
+
+					<button class="contact-form__submit" type="submit">
+						<span data-i18n="contactSubmit">SEND MESSAGE</span>
+					</button>
+
+					<div
+						class="contact-form__status"
+						id="contactFormStatus"
+						aria-live="polite"
+					></div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
